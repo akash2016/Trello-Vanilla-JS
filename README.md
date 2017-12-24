@@ -1,7 +1,7 @@
 ES6-boilerplate
 
-Standard ES6 Boilerplate configured with babel, webpack and eslint. Runs on web pack dev server on watch mode.
+Standard ES6 Boilerplate configured with babel, webpack and eslint. Runs on Express server on port 3000.
 
 Usage
 
-npm start to run eslint on watch mode and dev-server at localhost:8080.
+npm start to run eslint on watch mode and expresss server at localhost:3000.
