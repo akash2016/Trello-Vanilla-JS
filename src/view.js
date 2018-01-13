@@ -18,9 +18,9 @@ const createBoard = (cards) => {
     ${cards.filter(card => (card.lane === lane.TODO)).map(card => `<div id=${card.id} class='card'>
     ${card.name}:
     ${card.description}
-    <button class='move'>Hold</button>
-    <button class='move'>In Progress</button>
-    <button class='move'>Complete</button>
+    <button class='move' name='HOLD'>Hold</button>
+    <button class='move' name='INPROGRESS'>In Progress</button>
+    <button class='move' name='COMPLETE'>Complete</button>
     </div>`)}
     </div>
     <div id="InProgress">
@@ -28,8 +28,8 @@ const createBoard = (cards) => {
     ${cards.filter(card => (card.lane === lane.INPROGRESS)).length > 0 ? cards.filter(card => (card.lane === lane.INPROGRESS)).map(card => `<div id=${card.id} class='card'>
     ${card.name}:
     ${card.description}
-    <button class='move'>Hold</button>
-    <button class='move'>Complete</button>
+    <button class='move' name='HOLD'>Hold</button>
+    <button class='move' name='COMPLETE'>Complete</button>
     </div>`) : 'Nothing in Progress yet'}
     </div>
     <div id="Hold">
@@ -37,8 +37,8 @@ const createBoard = (cards) => {
     ${cards.filter(card => (card.lane === lane.HOLD)).length > 0 ? cards.filter(card => (card.lane === lane.HOLD)).map(card => `<div id=${card.id} class='card'>
     ${card.name}:
     ${card.description}
-    <button class='move'>In Progress</button>
-    <button class='move'>Complete</button>
+    <button class='move' name='INPROGRESS'>In Progress</button>
+    <button class='move' name='COMPLETE'>Complete</button>
     </div>`) : 'Nothing on hold yet'}
     </div>
     <div id="Complete">
@@ -46,8 +46,8 @@ const createBoard = (cards) => {
     ${cards.filter(card => (card.lane === lane.COMPLETE)).length > 0 ? cards.filter(card => (card.lane === lane.COMPLETE)).map(card => `<div id=${card.id} class='card'>
     ${card.name}:
     ${card.description}
-    <button class='move'>In Progress</button>
-    <button class='move'>Hold</button>
+    <button class='move' name='INPROGRESS'>In Progress</button>
+    <button class='move' name='HOLD'>Hold</button>
     </div>`) : 'Nothing complete yet'}
     </div>
     </div>`;

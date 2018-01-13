@@ -12,6 +12,10 @@ class Model {
       id: generateId(), name, description, lane: lane.TODO,
     });
     console.log(this.cards);
+  };
+
+  changeLane(cardId, newLane) {
+    this.cards[this.cards.findIndex(card => card.id === cardId)].lane = newLane;
   }
 }
 
