@@ -11,4 +11,9 @@ class App {
 }
 const myTrello = new App();
 
+window.addEventListener('click', (e) => {
+  e.preventDefault();
+  myTrello.controller.handleChange(e);
+});
+
 myTrello.view.render();

@@ -1,0 +1,9 @@
+const LANE_NAME = {
+  TODO: 'TODO',
+  INPROGRESS: 'INPROGRESS',
+  HOLD: 'HOLD',
+  COMPLETE: 'COMPLETE',
+}
+
+
+export default LANE_NAME;
