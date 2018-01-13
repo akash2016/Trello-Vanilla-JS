@@ -1,7 +1,5 @@
-ES6-boilerplate
-
-Standard ES6 Boilerplate configured with babel, webpack and eslint. Runs on Express server on port 3000.
+Trello simple made using MVC in Vanilla JS
+find demo here: https://akash2016.github.io/Trello-Vanilla-JS/
 
 Usage
-
-npm start to run eslint on watch mode and expresss server at localhost:3000.
+npm start to run eslint on watch mode and dev-server at localhost:8080.
