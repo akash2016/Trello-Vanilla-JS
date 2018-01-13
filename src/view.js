@@ -1,6 +1,6 @@
 import lane from './enum';
 
-const createForm = () => `<div>
+const createForm = () => `<div align="center">
       <form>
       <label>Name of Task: </label>
       <input class='toDoName' name='toDoName'></input>
@@ -12,16 +12,16 @@ const createForm = () => `<div>
 
 const createBoard = (cards) => {
   if (cards.length > 0) {
-    return `<div>
-    <div id="TODO">
-   <h2> ${lane.TODO}</h2>
-    ${cards.filter(card => (card.lane === lane.TODO)).map(card => `<div id=${card.id} class='card'>
+    return `<div style="display:grid;grid-template-columns: auto auto auto auto">
+    <div id="TODO" >
+   <h2 style="color:black"> ${lane.TODO}</h2>
+    ${cards.filter(card => (card.lane === lane.TODO)).length > 0 ? cards.filter(card => (card.lane === lane.TODO)).map(card => `<div id=${card.id} class='card'>
     ${card.name}:
     ${card.description}
     <button class='move' name='HOLD'>Hold</button>
     <button class='move' name='INPROGRESS'>In Progress</button>
     <button class='move' name='COMPLETE'>Complete</button>
-    </div>`)}
+    </div>`) : 'Nothing new TODO'}
     </div>
     <div id="InProgress">
     <h2> ${lane.INPROGRESS}</h2>
@@ -52,7 +52,7 @@ const createBoard = (cards) => {
     </div>
     </div>`;
   }
-  return 'Add Card to Trello';
+  return '';
 };
 
 class View {
