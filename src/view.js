@@ -21,7 +21,7 @@ const createBoard = (cards) => {
     <button class='move' name='HOLD'>Hold</button>
     <button class='move' name='INPROGRESS'>In Progress</button>
     <button class='move' name='COMPLETE'>Complete</button>
-    </div>`) : 'Nothing new TODO'}
+    </div>`).join('') : 'Nothing new TODO'}
     </div>
     <div id="InProgress">
     <h2> ${lane.INPROGRESS}</h2>
@@ -30,7 +30,7 @@ const createBoard = (cards) => {
     ${card.description}
     <button class='move' name='HOLD'>Hold</button>
     <button class='move' name='COMPLETE'>Complete</button>
-    </div>`) : 'Nothing in Progress yet'}
+    </div>`).join('') : 'Nothing in Progress yet'}
     </div>
     <div id="Hold">
     <h2> ${lane.HOLD}</h2>
@@ -39,7 +39,7 @@ const createBoard = (cards) => {
     ${card.description}
     <button class='move' name='INPROGRESS'>In Progress</button>
     <button class='move' name='COMPLETE'>Complete</button>
-    </div>`) : 'Nothing on hold yet'}
+    </div>`).join('') : 'Nothing on hold yet'}
     </div>
     <div id="Complete">
     <h2> ${lane.COMPLETE}</h2>
@@ -48,7 +48,7 @@ const createBoard = (cards) => {
     ${card.description}
     <button class='move' name='INPROGRESS'>In Progress</button>
     <button class='move' name='HOLD'>Hold</button>
-    </div>`) : 'Nothing complete yet'}
+    </div>`).join('') : 'Nothing complete yet'}
     </div>
     </div>`;
   }
