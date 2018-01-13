@@ -8,6 +8,8 @@ const createForm = () => `<div>
       </form>
       </div>`;
 
+const createBoard = (cards) => (cards.length >0 ? 'hello' : 'Add Card to Trello');
+
 class View {
   constructor(model) {
     this.model = model;
@@ -15,7 +17,8 @@ class View {
   render() {
     const domId = document.getElementById('root');
     const form = createForm();
-    domId.innerHTML = `<div>${form}</div>`;
+    const board = createBoard(this.model.cards);
+    domId.innerHTML = `<div>${form}<br /> ${board}</div>`;
   }
 }
 
